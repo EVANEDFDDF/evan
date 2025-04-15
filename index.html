@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Développeur Roblox | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      --glass: rgba(255, 255, 255, 0.08);
+      --blur: blur(20px);
+      --radius: 20px;
+      --accent: #00d4ff;
+      --text-light: #ffffff;
+      --text-muted: #bbbbbb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-light);
+      line-height: 1.6;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #00d4ff, #00ffc3);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 2rem;
+    }
+
+    section {
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00ffc3;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li::before {
+      content: "✔";
+      margin-right: 0.5rem;
+      color: #00ffc3;
+    }
+
+    .price-card {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      border-left: 4px solid #00ffc3;
+    }
+
+    .price-card strong {
+      font-size: 1.1rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      resize: none;
+    }
+
+    .contact-form button {
+      margin-top: 1rem;
+      background: #00d4ff;
+      color: black;
+      font-weight: bold;
+      padding: 0.8rem 2rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #00ffc3;
+    }
+
+    a {
+      color: #00d4ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Développeur Roblox</h1>
+    <p>Créateur de jeux, systèmes et expériences sur mesure</p>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>À propos de moi</h2>
+      <p>Je suis un développeur Roblox passionné, spécialisé dans les systèmes de jeu, les interfaces modernes et les expériences immersives. Chaque projet est pour moi une opportunité de repousser les limites de la créativité sur Roblox Studio.</p>
+    </section>
+
+    <section>
+      <h2>Qualités</h2>
+      <ul>
+        <li>Créatif & innovant</li>
+        <li>Code propre et structuré</li>
+        <li>Respect des délais</li>
+        <li>Écoute active des besoins</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Défauts</h2>
+      <ul>
+        <li>Trop perfectionniste</li>
+        <li>Travail en solo principalement</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tarifs</h2>
+      <div class="price-card">
+        <strong>💡 Script ou système simple :</strong>
+        <p>5€ - 10€</p>
+      </div>
+      <div class="price-card">
+        <strong>🎮 Système complet / mini-jeu :</strong>
+        <p>15€ - 30€</p>
+      </div>
+      <div class="price-card">
+        <strong>🧠 Jeu complet avec UI et mécaniques :</strong>
+        <p>40€ et +</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <form class="contact-form">
+        <label for="name">Nom</label>
+        <input type="text" id="name" placeholder="Votre nom" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Votre email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+      <p style="margin-top: 1.5rem;">
+        📧 <a href="mailto:tonemail@example.com">tonemail@example.com</a><br>
+        💬 Discord : <strong>TonPseudo#1234</strong><br>
+        🐦 Twitter : <a href="https://twitter.com/tonpseudo" target="_blank">@tonpseudo</a>
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
